@@ -352,6 +352,7 @@ main {
   box-shadow: 0 0 5px aliceblue;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 80%;
@@ -374,6 +375,7 @@ main {
   font-weight: 700;
   position: relative;
   overflow: hidden;
+  text-transform: capitalize;
 }
 .card:active {
   transform: scale(0.98);
@@ -398,8 +400,25 @@ main {
 }
 .card:hover::before {
   animation: before 4s ease-in-out infinite;
+  /* animation: animateCircle 4s ease-in-out infinite; */
   display: block;
 }
+/* @keyframes animateCircle {
+  0% {
+    display: block;
+    box-shadow: 0 0 50px 30px red;
+
+    transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
+      translateY(-30px);
+  }
+  100% {
+    display: block;
+    box-shadow: 0 0 50px 30px red;
+
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg)
+      translateY(-30px);
+  }
+} */
 @keyframes before {
   0% {
     /* width: 0; */
@@ -418,7 +437,7 @@ main {
     top: 0;
     left: 70%;
     bottom: 0;
-    filter: hue-rotate(150deg);
+    filter: hue-rotate(250deg);
 
     /* filter: hue-rotate(200deg); */
   }
@@ -427,7 +446,7 @@ main {
     top: 50%;
     left: 0;
     bottom: 0;
-    filter: hue-rotate(300deg);
+    filter: hue-rotate(350deg);
     box-shadow: 0 0 150px 150px red;
   }
   75% {
@@ -435,7 +454,7 @@ main {
     top: 75%;
     left: 80%;
     bottom: 0;
-    filter: hue-rotate(600deg);
+    filter: hue-rotate(550deg);
     box-shadow: 0 0 110px 110px red;
   }
   90% {
